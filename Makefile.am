@@ -184,6 +184,12 @@ src_libdrivers_la_SOURCES += \
 	src/hardware/agilent-dmm/agilent-dmm.h \
 	src/hardware/agilent-dmm/sched.c
 endif
+if HW_ANGEL_KNOCK
+src_libdrivers_la_SOURCES += \
+	src/hardware/angel-knock/protocol.h \
+	src/hardware/angel-knock/protocol.c \
+	src/hardware/angel-knock/api.c
+endif
 if HW_APPA_55II
 src_libdrivers_la_SOURCES += \
 	src/hardware/appa-55ii/protocol.h \
