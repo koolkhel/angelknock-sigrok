@@ -27,8 +27,16 @@
 
 #define LOG_PREFIX "angel-knock"
 
+#define ANGEL_KNOCK_BUF_SIZE 32
+
+#define ANGEL_KNOCK_CHANNELS 1
+
 /** Private, per-device-instance driver context. */
 struct dev_context {
+    /* Temporary state across callbacks */
+        uint8_t buf[ANGEL_KNOCK_BUF_SIZE];
+        unsigned int buf_len;
+        unsigned int num_log_records;
 	/* Model-specific information */
 
 	/* Acquisition settings */
